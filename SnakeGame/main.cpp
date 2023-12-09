@@ -2,7 +2,18 @@
 
 int main()
 {
-	std::cout << "贪吃蛇游戏项目" << std::endl;
-	std::cin.get();
+	// 初始化
+
+
+	// 游戏主循环
+	while (true)
+	{
+		if (1)
+			break;
+	}
+
+	// 释放内存
+
+	
 	return 0;
 }
