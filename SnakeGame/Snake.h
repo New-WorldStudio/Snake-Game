@@ -16,6 +16,8 @@ namespace SnakeGame
 			int x;
 			int y;
 		};
+		//判断豆子是否被吃掉
+		bool grow;
 		//获得蛇的方向
 		void gitDirection();
 		//根据方向移动蛇

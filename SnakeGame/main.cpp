@@ -2,6 +2,7 @@
 #include "Map.h"
 #include<Windows.h>
 #include"beans.h"
+#include"tool.h"
 int main()
 {
 	// 初始化地图
@@ -21,16 +22,18 @@ int main()
 	// 游戏主循环
 	while (true) 
 	{
+		//判断是否失败
+		Defeat(SNAKES);
 		// 更新方向
 		snake.gitDirection();
-		
 		// 移动蛇
 		snake.move();
 		// 更新地图
 		map.UpMap(SNAKES,beans.x,beans.y);
-		beans.EatBeans(SNAKES);
+		//判断豆子是否被吃掉
+		snake.grow = beans.EatBeans(SNAKES);
 		// 暂停一段时间，让蛇的移动可见
-		Sleep(150); // 暂停100毫秒
+		Sleep(rand()%300+5); 
 	}
 
 	return 0;

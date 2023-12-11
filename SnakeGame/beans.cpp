@@ -22,10 +22,13 @@ void Beans::InitBeans(std::vector<Snake::Point>* Snakes)
     } while (conflict);
 }
 //判断豆子是否噶掉
-void Beans::EatBeans(std::vector<Snake::Point>* Snakes)
+bool Beans::EatBeans(std::vector<Snake::Point>* Snakes)
 {
     if (this->x == (*Snakes)[0].x && this->y == (*Snakes)[0].y)
     {
         InitBeans(Snakes);
+        return true;
     }
+    //如果豆子没被吃，就返回false
+    return false;
 }

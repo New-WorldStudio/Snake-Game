@@ -42,28 +42,40 @@ void Snake::move() {
     case 'w':
         if (this->Snakes.size() > 1) {
             this->Snakes.insert(this->Snakes.begin(), { this->Snakes[0].x, this->Snakes[0].y - 1 });
-            this->Snakes.pop_back();
+            if (this->grow == false)
+            {
+                this->Snakes.pop_back();
+            }   
         }
         break;
     case 'A':
     case 'a':
         if (this->Snakes.size() > 1) {
             this->Snakes.insert(this->Snakes.begin(), { this->Snakes[0].x - 1, this->Snakes[0].y });
-            this->Snakes.pop_back();
+            if (this->grow == false)
+            {
+                this->Snakes.pop_back();
+            }
         }
         break;
     case 'S':
     case 's':
         if (this->Snakes.size() > 1) {
             this->Snakes.insert(this->Snakes.begin(), { this->Snakes[0].x, this->Snakes[0].y + 1 });
-            this->Snakes.pop_back();
+            if (this->grow == false)
+            {
+                this->Snakes.pop_back();
+            }
         }
         break;
     case 'D':
     case 'd':
         if (this->Snakes.size() > 1) {
             this->Snakes.insert(this->Snakes.begin(), { this->Snakes[0].x + 1, this->Snakes[0].y });
-            this->Snakes.pop_back();
+            if (this->grow == false)
+            {
+                this->Snakes.pop_back();
+            }
         }
         break;
     default:

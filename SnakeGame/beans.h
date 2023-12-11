@@ -12,6 +12,6 @@ namespace SnakeGame
 		int x;
 		int y;
 		//ÅÐ¶Ï¶¹×ÓÊÇ·ñ¸Áµô
-		void EatBeans(std::vector<Snake::Point>* Snakes);
+		bool EatBeans(std::vector<Snake::Point>* Snakes);
 	};
 }
