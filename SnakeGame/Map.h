@@ -1,19 +1,20 @@
-#ifndef SNAKE_GAME_MAP
-
+#pragma once
+#include<Windows.h>
 #include <iostream>
-#include <Windows.h>
-
+#include<vector>
+#include"Snake.h"
 namespace SnakeGame
 {
+	//地图类
 	class Map
 	{
 	public:
 		Map(int cols,int rows); 
 		~Map();
-		char getMapElement(int cols,int rows);
-		void setMapElement(int cols,int rows,char element);
-		void initializationMap();
-		void update();
+		//显示地图
+		void ShowMap();
+		//刷新地图
+		void UpMap(std::vector<Snake::Point>* Snakes);
 	private:
 		int rows;
 		int cols;
@@ -21,4 +22,3 @@ namespace SnakeGame
 	};
 }
 
-#endif // !SNAKE_GAME_MAP
