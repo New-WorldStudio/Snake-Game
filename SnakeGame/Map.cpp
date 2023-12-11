@@ -35,7 +35,6 @@ Map::Map(int cols,int rows) : rows(rows),cols(cols)
         }
     }
 }
-
 /*
 *   打印地图
 */
@@ -48,17 +47,23 @@ void Map::ShowMap()
         std::cout << "\n";
     }
 }
-//刷新地图
-void Map::UpMap(std::vector<Snake::Point>* Snakes)
-{
-    for (const auto& point : *Snakes)
-    {
-        gotoxy(point.x, point.y);
-        std::cout << "*";
-    
-    }
-}
 
+// 刷新地图
+void Map::UpMap(std::vector<Snake::Point>* Snakes ,int x,int y)
+{
+    for (size_t i = 0; i < Snakes->size(); ++i) {
+        const auto& point = (*Snakes)[i];
+        gotoxy(point.x, point.y);
+        if (i == Snakes->size() - 1) {
+            std::cout << ' '; // 显示蛇的末尾为空格
+        }
+        else {
+            std::cout << "*"; // 显示蛇的身体部分
+        }
+    }
+    gotoxy(x, y);
+    std::cout << "0";
+}
 /*
 *释放地图内存
 */

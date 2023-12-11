@@ -1,5 +1,7 @@
 #pragma once
 #include<vector>
+#include<conio.h>
+#include<iostream>
 namespace SnakeGame
 {
 	//蛇类
@@ -14,8 +16,13 @@ namespace SnakeGame
 			int x;
 			int y;
 		};
+		//获得蛇的方向
+		void gitDirection();
+		//根据方向移动蛇
+		void move();
 		//蛇的身体：二维vector容器，储存每个蛇的身体节点。
 		std::vector<Point>Snakes;
+		char Direction=' ';
 	private:
 	};
 

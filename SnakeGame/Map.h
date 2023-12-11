@@ -14,7 +14,7 @@ namespace SnakeGame
 		//显示地图
 		void ShowMap();
 		//刷新地图
-		void UpMap(std::vector<Snake::Point>* Snakes);
+		void UpMap(std::vector<Snake::Point>* Snakes,int x,int y);
 	private:
 		int rows;
 		int cols;
