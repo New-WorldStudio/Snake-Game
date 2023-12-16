@@ -7,11 +7,12 @@ namespace SnakeGame
 	class Beans
 	{
 	public:
-		//生成一个豆子
 		void InitBeans(std::vector<Snake::Point>* Snakes);
+		bool EatBeans(std::vector<Snake::Point>* Snakes);
+		int getX();
+		int getY();
+	private:
 		int x;
 		int y;
-		//判断豆子是否噶掉
-		bool EatBeans(std::vector<Snake::Point>* Snakes);
 	};
 }

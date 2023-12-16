@@ -32,3 +32,6 @@ bool Beans::EatBeans(std::vector<Snake::Point>* Snakes)
     //如果豆子没被吃，就返回false
     return false;
 }
+int Beans::getX() { return this->x; }
+
+int Beans::getY() { return this->y; }
